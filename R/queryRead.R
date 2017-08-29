@@ -2,11 +2,13 @@
 #'
 #'@param fileName the directory or name of a text file.
 #'
-#'@return A character value
+#'@return A character value, hooray
 #'
 #'@examples
 #'\dontrun{queryRead('exampleQuery.txt')}
 #'@export
+#'
+#'
 
 queryRead <- function(fileName) {
   query <- readChar(fileName, file.info(fileName)$size)
