@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Hello, world!\n#\n# This is an example function named 'hello'\n# which prints 'Hello, world!'.\n#\n# You can learn more about package authoring with RStudio at:\n#\n#   http://r-pkgs.had.co.nz/\n#\n# Some useful keyboard shortcuts for package authoring:\n#\n#   Build and Reload Package:  'Ctrl + Shift + B'\n#   Check Package:             'Ctrl + Shift + E'\n#   Test Package:              'Ctrl + Shift + T'\n#\n\nqueryRead <- function(fileName) {\n  query <- readChar(fileName, file.info(fileName)$size)\n  query\n}\n",
+    "created" : 1504048117831.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "7407919",
+    "id" : "8361FC16",
+    "lastKnownWriteTime" : 1504048218,
+    "last_content_update" : 1504048218099,
+    "path" : "~/Code/lrHelpers/R/queryRead.R",
+    "project_path" : "R/queryRead.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
