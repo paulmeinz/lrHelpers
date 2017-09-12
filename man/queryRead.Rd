@@ -10,7 +10,7 @@ queryRead(fileName)
 \item{fileName}{the directory or name of a text file.}
 }
 \value{
-A character value
+A character value, hooray
 }
 \description{
 Read a query or text document in as on character value

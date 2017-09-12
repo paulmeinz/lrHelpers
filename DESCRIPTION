@@ -11,5 +11,9 @@ Encoding: UTF-8
 LazyData: true
 Imports:
     dplyr,
-    RODBC
+    RODBC,
+    tidyr,
+    knitr,
+    markdown,
+    rmarkdown
 RoxygenNote: 6.0.1
