@@ -1,4 +1,8 @@
 #' Create an in statement
+#' This funciton helps create a parenthetical character list for sql
+#' in statements. E.g., 1:5 -> (1,2,3,4,5). This can be useful when provided
+#' a list of something by a faculty member that needs to be used in a sql
+#' query.
 #'
 #'@param vect a vector of values to be included in an in statment
 #'@param quoted logical; quote the values between parentheses?

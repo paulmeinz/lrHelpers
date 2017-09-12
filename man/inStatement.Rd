@@ -2,7 +2,11 @@
 % Please edit documentation in R/inStatement.R
 \name{inStatement}
 \alias{inStatement}
-\title{Create an in statement}
+\title{Create an in statement
+This funciton helps create a parenthetical character list for sql
+in statements. E.g., 1:5 -> (1,2,3,4,5). This can be useful when provided
+a list of something by a faculty member that needs to be used in a sql
+query.}
 \usage{
 inStatement(vect, quoted = FALSE)
 }
@@ -16,8 +20,12 @@ A set of values surrounded by parens
 }
 \description{
 Create an in statement
+This funciton helps create a parenthetical character list for sql
+in statements. E.g., 1:5 -> (1,2,3,4,5). This can be useful when provided
+a list of something by a faculty member that needs to be used in a sql
+query.
 }
 \examples{
 c <- 1:5
-inStatement(c)
+inStatement(c, quoted = TRUE)
 }
