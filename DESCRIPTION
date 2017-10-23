@@ -15,5 +15,6 @@ Imports:
     tidyr,
     knitr,
     markdown,
-    rmarkdown
+    rmarkdown,
+    xlsx
 RoxygenNote: 6.0.1

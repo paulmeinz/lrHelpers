@@ -1,19 +1,28 @@
-#' Create an in statement
+#' Read in assessment validation data
 #'
-#' This funciton helps create a parenthetical character list for sql
-#' in statements. E.g., 1:5 -> (1,2,3,4,5). This can be useful when provided
-#' a list of something by a faculty member that needs to be used in a sql
-#' query.
+#' This function reads in data from assessment validation surveys,
+#' concatenates the files, and produces student IDS
 #'
 #'@param directory the file directory for scanned assessment documents
 #'
 #'@return A set of values surrounded by parens
 #'
-#'@examples
-#'c <- 1:5
-#'inStatement(c, quoted = TRUE)
 #'@export
 #'
 #'
 
-pullScans <- function() {return('Hello World!')}
+pullScans <- function(directory) {
+  direct <- directory
+  all <- list.files(direct)
+  data <- data.frame()
+  for (i in all) {
+    file <- paste(direct, '/', i, sep = '')
+    read <- xlsx::read.xlsx(file, 1)
+    classNbr <- idClassNbr(i)
+    read$classNbr <- classNbr
+    data <- rbind(data, read)
+  }
+  emplid <- apply(data[,1:7], 1, paste, collapse = '')
+  new <- data.frame(emplid, data[,c(8,9,13)])
+  new
+  }
