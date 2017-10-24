@@ -3,7 +3,8 @@
 #' This function reads in data from assessment validation surveys,
 #' concatenates the files, and produces student IDS
 #'
-#'@param directory the file directory for scanned assessment documents
+#'@param directory the file directory for scanned assessment documents. Don't
+#'put a forward slash in the director!
 #'
 #'@return A set of values surrounded by parens
 #'

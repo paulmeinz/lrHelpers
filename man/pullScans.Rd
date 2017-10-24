@@ -7,7 +7,8 @@
 pullScans(directory)
 }
 \arguments{
-\item{directory}{the file directory for scanned assessment documents}
+\item{directory}{the file directory for scanned assessment documents. Don't
+put a forward slash in the director!}
 }
 \value{
 A set of values surrounded by parens
