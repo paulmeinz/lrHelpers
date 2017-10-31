@@ -18,12 +18,13 @@ pullScans <- function(directory) {
   data <- data.frame()
   for (i in all) {
     file <- paste(direct, '/', i, sep = '')
-    read <- xlsx::read.xlsx(file, 1, colClasses = 'character')
+    read <- xlsx::read.xlsx(file, 1, colClasses = c('character'))
     classNbr <- idClassNbr(i)
     read$classNbr <- classNbr
     data <- rbind(data, read)
   }
   emplid <- apply(data[,1:7], 1, paste, collapse = '')
   new <- data.frame(emplid, data[,c(8,9,13)])
-  new
+  final <- sapply(new, as.character)
+  final
   }
