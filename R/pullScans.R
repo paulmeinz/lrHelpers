@@ -4,7 +4,7 @@
 #' concatenates the files, and produces student IDS
 #'
 #'@param directory the file directory for scanned assessment documents. Don't
-#'put a forward slash in the director!
+#'put a forward slash in the directory!
 #'
 #'@return A set of values surrounded by parens
 #'
@@ -18,7 +18,7 @@ pullScans <- function(directory) {
   data <- data.frame()
   for (i in all) {
     file <- paste(direct, '/', i, sep = '')
-    read <- xlsx::read.xlsx(file, 1)
+    read <- xlsx::read.xlsx(file, 1, colClasses = 'character')
     classNbr <- idClassNbr(i)
     read$classNbr <- classNbr
     data <- rbind(data, read)
