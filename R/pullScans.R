@@ -25,6 +25,6 @@ pullScans <- function(directory) {
   }
   emplid <- apply(data[,1:7], 1, paste, collapse = '')
   new <- data.frame(emplid, data[,c(8,9,13)])
-  final <- sapply(new, as.character)
+  final <- data.frame(sapply(new, as.character))
   final
   }
